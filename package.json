@@ -19,7 +19,7 @@
             "upm-grove-rotary":     "groves/grove-rotary.js",
             "upm-grove-sound":      "groves/grove-sound.js",
             "upm-grove-temperature": "groves/grove-temperature.js",
-            "upm-grove-servo":      "groves/grove-servo.js",
+            "upm-grove-servo":      "groves/grove-servo.js"
         }
     },
     "author": {
