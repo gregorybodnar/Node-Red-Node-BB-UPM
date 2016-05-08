@@ -20,7 +20,6 @@
             "upm-grove-sound":      "groves/grove-sound.js",
             "upm-grove-temperature": "groves/grove-temperature.js",
             "upm-grove-servo":      "groves/grove-servo.js",
-            "upm-curieimu":         "groves/curieimu.js"
         }
     },
     "author": {
