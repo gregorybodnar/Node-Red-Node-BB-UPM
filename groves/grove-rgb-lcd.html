@@ -3,11 +3,11 @@
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-    <div class="form-row">
+    <div class="form-row" >
         <label for="node-input-platform"><i class="fa fa fa-wrench"></i> Platform</label>
         <select type="text" id="node-input-platform">
-            <option value="0" selected="selected">Native</option>
-            <option value="512">Firmata</option>
+            <option value="0" selected="selected">I2C1</option>
+            <option value="1">I2C2</option>
         </select>
     </div> 
     <div class="form-row">
@@ -78,7 +78,7 @@
     function oneditprepare(){}
 
     RED.nodes.registerType('upm-grove-rgb-lcd', {
-        category: 'UPM Sensors',
+        category: 'Grove Sensors',
         defaults: {
             name: {
                 value: ''

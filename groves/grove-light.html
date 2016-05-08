@@ -3,7 +3,7 @@
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-    <div class="form-row">
+    <div class="form-row" style="display: none;">
         <label for="node-input-platform"><i class="fa fa fa-wrench"></i> Platform</label>
         <select type="text" id="node-input-platform">
             <option value="0" selected="selected">Native</option>
@@ -19,6 +19,7 @@
             <option value="3">A3</option>
             <option value="4">A4</option>
             <option value="5">A5</option>
+            <option value="6">A6</option>
         </select>
     </div>    
     <div class="form-row">
@@ -49,7 +50,7 @@
 
 <script type="text/javascript">
     RED.nodes.registerType('upm-grove-light', {
-        category: 'UPM Sensors',
+        category: 'Grove Sensors',
         defaults: {
             name: {
                 value: ''
