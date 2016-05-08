@@ -11,7 +11,7 @@ this is ~/.node-red .
 
 ### Usage
 
-Only tested on the Intel Edison so far, but it should work on other platforms supported by <a href="https://github.com/intel-iot-devkit/mraa" target="_blank">MRAA</a> and <a href="https://github.com/intel-iot-devkit/upm" target="_blank">UPM</a>.
+Only tested on the Beaglebone green wireless so far, but it should work on other platforms supported by <a href="https://github.com/intel-iot-devkit/mraa" target="_blank">MRAA</a> and <a href="https://github.com/intel-iot-devkit/upm" target="_blank">UPM</a>.
 
 Ensure you have the latest firmware running, and have Node-RED installed.
 
@@ -23,7 +23,7 @@ If you do need to install Node-RED, you can do this as follows from the home dir
         npm install -g --unsafe-perm node-red
         mkdir .node-red
         cd .node-red
-        npm install node-red-node-upm
+        npm install https://github.com/Pillar1989/Node-Red-Node-BB-UPM#BBGW
 
 Then run
 
@@ -45,4 +45,4 @@ Then run
 * ... more to follow
 
 ### Screenshot
-![screenshot](https://raw.githubusercontent.com/w4ilun/Node-Red-Node-UPM/master/screenshot.png)
+![screenshot](https://github.com/Pillar1989/Node-Red-Node-BB-UPM/blob/BBGW/screenshot.png)
