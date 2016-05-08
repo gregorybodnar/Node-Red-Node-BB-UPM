@@ -7,7 +7,7 @@
 Run the following command in the root directory of your Node-RED install, usually
 this is ~/.node-red .
 
-        npm install node-red-node-upm
+        npm install -g https://github.com/Pillar1989/Node-Red-Node-BB-UPM#BBGW
 
 ### Usage
 
