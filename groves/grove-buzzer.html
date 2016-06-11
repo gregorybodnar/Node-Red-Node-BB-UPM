@@ -1,0 +1,142 @@
+<script type="text/x-red" data-template-name="UPM-Grove-Buzzer">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row" style="display: none;">
+        <label for="node-input-platform"><i class="fa fa fa-wrench"></i> Platform</label>
+        <select type="text" id="node-input-platform">
+            <option value="0" selected="selected">Native</option>
+            <option value="512">Firmata</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-pin"><i class="fa fa-map-pin"></i> Pin</label>
+        <select type="text" id="node-input-pin">
+            <option value="3" selected="selected">GPIO_38</option>
+            <option value="4">GPIO_39</option>
+            <option value="5">GPIO_34</option>
+            <option value="6">GPIO_35</option>
+            <option value="7">GPIO_66</option>
+            <option value="8">GPIO_67</option>
+            <option value="9">GPIO_69</option>
+            <option value="10">GPIO_68</option>
+            <option value="11">GPIO_45</option>
+            <option value="12">GPIO_44</option>
+            <option value="13">GPIO_23</option>
+            <option value="14">GPIO_26</option>
+            <option value="15">GPIO_37</option>
+            <option value="16">GPIO_46</option>
+            <option value="17">GPIO_27</option>
+            <option value="18">GPIO_65</option>
+            <option value="19">GPIO_22</option>
+            <option value="20">GPIO_63</option>
+            <option value="21">GPIO_62</option>
+            <option value="22">GPIO_37</option>
+            <option value="23">GPIO_36</option>
+            <option value="24">GPIO_33</option>
+            <option value="25">GPIO_32</option>
+            <option value="26">GPIO_61</option>
+            <option value="27">GPIO_86</option>
+            <option value="28">GPIO_88</option>
+            <option value="29">GPIO_87</option>
+            <option value="30">GPIO_89</option>
+            <option value="31">GPIO_10</option>
+            <option value="32">GPIO_11</option>
+            <option value="33">GPIO_9</option>
+            <option value="34">GPIO_81</option>
+            <option value="35">GPIO_8</option>     
+            <option value="36">GPIO_80</option>
+            <option value="37">GPIO_78</option>
+            <option value="38">GPIO_79</option>
+            <option value="39">GPIO_76</option>
+            <option value="40">GPIO_77</option>
+            <option value="41">GPIO_74</option>  
+            <option value="42">GPIO_75</option>
+            <option value="43">GPIO_72</option>
+            <option value="44">GPIO_73</option>
+            <option value="45">GPIO_77</option>
+            <option value="46">GPIO_71</option>
+            <option value="57">GPIO_30</option>
+            <option value="58">GPIO_60</option>  
+            <option value="59">GPIO_31</option>
+            <option value="60">GPIO_50</option>
+            <option value="61">GPIO_48</option>
+            <option value="62">GPIO_51</option> 
+            <option value="63">GPIO_5</option>
+            <option value="64">GPIO_4</option>
+            <option value="67">GPIO_3</option>
+            <option value="68">GPIO_2</option>
+            <option value="69">GPIO_49</option>
+            <option value="70">GPIO_15</option>
+            <option value="71">GPIO_117</option>             
+            <option value="72">GPIO_14</option>
+            <option value="73">GPIO_115</option>
+            <option value="74">GPIO_113</option>
+            <option value="75">GPIO_111</option>  
+            <option value="76">GPIO_112</option>
+            <option value="77">GPIO_110</option>
+            <option value="86">GPIO_20</option>
+            <option value="87">GPIO_7</option>            
+        </select>
+    </div>  
+    <div id="note-row" class="form-row">
+        <label for="node-input-note"><i class="fa fa-refresh"></i> Musical Note</label>
+        <select type="text" id="node-input-note">
+            <option value="3800" selected="selected">DO</option>
+            <option value="3400">RE</option>
+            <option value="3000">MI</option>
+            <option value="2900">FA</option>
+            <option value="2550">SOL</option>
+            <option value="2270">LA</option>
+            <option value="2000">SI</option>
+        </select>
+    </div>        
+</script>
+
+<script type="text/x-red" data-help-name="UPM-Grove-Buzzer">
+    <h2>Grove Buzzer</h2>
+    <br>
+    <p>This node will show the Grove Buzzer play musical note and change msg.payload based on the input (DO=3800,RE=3400,MI=3000,FA=2900,SOL=2550,LA=2270,SI=2000).</p>
+    <br>
+    <p>Learn More:
+        <a href="http://www.seeedstudio.com/wiki/Grove_-_Buzzer" target="_blank">Grove Buzzer</a>
+    </p>
+    <br>
+    <img src="http://www.seeedstudio.com/wiki/images/thumb/e/ed/Buzzer1.jpg/400px-Buzzer1.jpg" />
+</script>
+
+
+<script type="text/javascript">
+<script type="text/javascript">
+    RED.nodes.registerType('UPM-Grove-Buzzer', {
+        category: 'Grove Sensors',
+        defaults: {
+            name: {
+                value: ''
+            },
+	    platform: {
+                value: '0'
+	    },
+            pin:  {
+                value: '0',
+                required: true,
+                validate:RED.validators.number()
+            },
+            note: {
+                value: 3800,
+                required: true,
+                validate: RED.validators.number()
+            }
+        },
+        color: '#a6bbcf',
+        paletteLabel: 'Grove Buzzer',
+        inputs: 1,
+        outputs: 0,
+        icon: 'debug.png',
+        align: 'right',
+        label: function(){
+            return this.name || 'Grove Buzzer';
+        },
+    });
+</script>
