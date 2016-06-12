@@ -1,6 +1,6 @@
 {
     "name": "node-red-node-bb-upm",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Node-RED nodes to talk to sensors supported by the UPM library",
     "dependencies": {},
     "repository": {
