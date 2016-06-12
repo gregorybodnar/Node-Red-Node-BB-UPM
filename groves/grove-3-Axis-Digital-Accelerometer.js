@@ -22,9 +22,9 @@ module.exports = function(RED){
 
         //poll reading at interval
         this.timer = setInterval(function() {
-            sensor.update(); // Update the data
-            var raw = sensor.getRawValues(); // Read raw sensor data
-            var force = sensor.getAcceleration(); // Read acceleration force (g)
+            node.sensor.update(); // Update the data
+            var raw = node.sensor.getRawValues(); // Read raw sensor data
+            var force = node.sensor.getAcceleration(); // Read acceleration force (g)
             var rawvalues = raw.getitem(0) + " " + raw.getitem(1) + " " + raw.getitem(2);
            
            if(node.unit == 'RAW') {
