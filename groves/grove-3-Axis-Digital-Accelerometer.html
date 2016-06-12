@@ -1,0 +1,79 @@
+<script type="text/x-red" data-template-name="upm-grove-adxl345">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row" style="display: none;">
+        <label for="node-input-platform"><i class="fa fa fa-wrench"></i> Platform</label>
+        <select type="text" id="node-input-platform">
+            <option value="0" selected="selected">Native</option>
+            <option value="512">Firmata</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-pin"><i class="fa fa-map-pin"></i> I2C</label>
+        <select type="text" id="node-input-pin">
+            <option value="0" selected="selected">I2C1</option>
+            <option value="1">I2C2</option>
+        </select>
+    </div>    
+    <div class="form-row">
+        <label for="node-input-unit"><i class="fa fa-exchange"></i> Unit</label>
+        <select type="text" id="node-input-unit">
+            <option value="Lux" selected="selected">Lux</option>
+            <option value="RAW">Raw Value</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-interval"><i class="fa fa-refresh"></i> Interval (ms)</label>
+        <input type="text" id="node-input-interval" placeholder="1000">
+    </div>    
+</script>
+
+<script type="text/x-red" data-help-name="upm-grove-adxl345">
+    <h2>Grove 3 Axis Digital Accelerometer(16g)</h2>
+    <br>
+    <p>This node outputs the 3 Axis Digital Accelerometer reading or the raw analog value from the Grove 3 Axis Digital Accelerometer(16g).</p>
+    <br>
+    <p>Learn More:
+        <a href="http://www.seeedstudio.com/wiki/Grove_-_3-Axis_Digital_Accelerometer(%C2%B116g)" target="_blank">Grove 3 Axis Digital Accelerometer(16g)</a>
+    </p>
+    <br>
+    <img src="http://www.seeedstudio.com/wiki/File:3-axis_Accelerometer_ADXL345.jpg" />
+</script>
+
+
+<script type="text/javascript">
+    RED.nodes.registerType('upm-grove-adxl345', {
+        category: 'Grove Sensors',
+        defaults: {
+            name: {
+                value: ''
+            },
+	    platform: {
+		value: '0'
+	    },
+            unit:  {
+                value: 'Lux',
+            },
+            pin:  {
+                value: '0',
+                required: true,
+                validate:RED.validators.number()
+            },
+            interval: {
+                value: 1000,
+                required: true,
+                validate: RED.validators.number()
+            }
+        },
+        color: '#a6bbcf',
+        paletteLabel: 'Grove adxl345',
+        inputs: 0,
+        outputs: 1,
+        icon: 'seeed.png',
+        label: function(){
+            return this.name || 'Grove adxl345';
+        }
+    });
+</script>

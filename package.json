@@ -20,6 +20,7 @@
             "upm-grove-rotary":     "groves/grove-rotary.js",
             "upm-grove-sound":      "groves/grove-sound.js",
             "upm-grove-temperature": "groves/grove-temperature.js",
+            "upm-grove-adxl345": "groves/grove-3-Axis-Digital-Accelerometer.js",
             "upm-grove-servo":      "groves/grove-servo.js"
         }
     },
