@@ -30,9 +30,11 @@ module.exports = function(RED){
            if(node.unit == 'RAW') {
                 msg.payload = rawvalues;
             } else {
-                msg.payload.x = force.getitem(0).toFixed(2) + " g"; //x
-                msg.payload.y = force.getitem(1).toFixed(2) + " g"; //y
-                msg.payload.z = force.getitem(2).toFixed(2) + " g"; //z
+                var data={};
+                data.x = force.getitem(0).toFixed(2) + " g"; //x
+                data.y = force.getitem(1).toFixed(2) + " g"; //y
+                data.z = force.getitem(2).toFixed(2) + " g"; //z
+                msg.payload = data;
             }
             node.send(msg);
         }, node.interval);
