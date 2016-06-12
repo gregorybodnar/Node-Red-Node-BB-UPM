@@ -12,6 +12,7 @@
     "node-red": {
         "nodes": {
             "upm-grove-button":     "groves/grove-button.js",
+            "upm-grove-buzzer":     "groves/grove-buzzer.js",
             "upm-grove-led":        "groves/grove-led.js",
             "upm-grove-light":      "groves/grove-light.js",
             "upm-grove-relay":      "groves/grove-relay.js",
